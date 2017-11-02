@@ -1,4 +1,4 @@
-
+#include <vector>
 #include <iostream>
 using namespace std;
 
@@ -6,21 +6,20 @@ int main() {
 	int n;
 	int max = 0;
 
-	cout << "Enter the amount of numbers you want to enter(not more than 100)" << endl;
+	cout << "Enter the amount of numbers you want to enter" << endl;
 	cin >> n;
-	if (n > 100) {
-		cout << "invalid value>";
-		return 0;
-	}
+	
 	cout << "Enter you values" << endl;
-	int array[100];
+	vector<int> v;
 	for (int i = 0; i < n; i++) {
-		cin >> array[i];
+		int b;
+		cin >> b;
+		v.push_back(b);
 	}
 
 	for (int j = 0; j < n; j++) {
-		if (array[j] > max) {
-			max = array[j];
+		if (v[j] > max) {
+			max = v[j];
 		}
 	}
 
